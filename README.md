@@ -8,12 +8,11 @@ Imagine we are the member of a Retail/Telcos company and we wants to fuel its gr
 - Part 6: [A/B Testing](https://github.com/ToanToan110/A-B-Testing)
 
 # About this Project
-**Customer Life Time Value (CLV):** The value that customers bring during their time of operation.
-Determine which customers are worth investing in and exploiting.
-Businesses need to calculate the CLV index to determine which customer groups bring high value.
+**Customer Life Time Value (CLV):** This is an measure that represents the total profit earned throughout a customer life cycle, determine which customers are worth investing in and exploiting.
+If we can measure the future value our customer will provide, we can both regulate our relationship with them and adopt a more value-added approach for the medium to long term within our company. 
 
-=> Provide appropriate marketing strategies to optimize profits and costs.
-This Notebook show the way to determine which customer groups bring value (high CLV) and provide techniques to identify and group CLV, select appropriate machine learning models to classify high-CLV groups.
+=> This will also play a significant role in determining the budget allocated for marketing activities
+
 
 
 ## Prerequisites
@@ -23,3 +22,20 @@ Techniques: K-means
 
 ## Resources 
 Dataset: This notebook use [Retail Dataset](https://www.kaggle.com/datasets/vijayuv/onlineretail) on Kaggle
+
+# Approach
+**Đến đây có hai hướng tiếp cận để tính toán CLV:**
+
+
+1.   Tính toán dựa trên một khoảng thời gian cụ thể trên bộ dữ liệu
+2.   Tính toán dự trên công thức:
+
+          CTV = Avg Revenue * N_month * Rt_rate
+
+
+Trong đó:
+- Avg Revenue: Average monthly purchase made by the customer in the active customer window.
+- N_month : Number of months in the CLV prediction period
+- Rt_rate : Overall retention rate of all customers
+---
+
