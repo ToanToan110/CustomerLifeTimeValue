@@ -62,4 +62,14 @@ Overview the distribution of CLV:
 ![image](https://github.com/ToanToan110/CustomerLifeTimeValue/assets/64849001/bc0f9c8a-dc40-4b00-869a-6f36ed59f4d8)
 
 # Training model to predict CLV:
+For data sets with small dimensions and few records, models belonging to the decision tree family are suitable. Include: Decision Tree Regression, Random Forest, K-Nearest Neighbors.
+We use K-nearest to traning this data
 
+![image](https://github.com/ToanToan110/CustomerLifeTimeValue/assets/64849001/e1a03a67-2420-4529-9ac3-920e4e03e6f0)
+
+Sumup:
+- On average for a customer, the model's prediction is about $62000 off => This error is to large
+- The model explains 83% of the variation in the dependent variable
+---
+# Next step:
+Build a classifier to cluster customer base on their CLV
