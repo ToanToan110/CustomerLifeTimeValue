@@ -24,18 +24,17 @@ Techniques: K-means
 Dataset: This notebook use [Retail Dataset](https://www.kaggle.com/datasets/vijayuv/onlineretail) on Kaggle
 
 # Approach
-**Đến đây có hai hướng tiếp cận để tính toán CLV:**
+The formula to calculate Life time value is:
+
+          CLTV = (Customer Value / Churn Rate) × Profit Margin
 
 
-1.   Tính toán dựa trên một khoảng thời gian cụ thể trên bộ dữ liệu
-2.   Tính toán dự trên công thức:
-
-          CTV = Avg Revenue * N_month * Rt_rate
-
-
-Trong đó:
-- Avg Revenue: Average monthly purchase made by the customer in the active customer window.
-- N_month : Number of months in the CLV prediction period
-- Rt_rate : Overall retention rate of all customers
----
+With:
+- CLTV = (Customer Value / Churn Rate) × Profit Margin
+- Customer Value = Average Order Value * Purchase Frequency
+- Average Order Value = Total Price / Total Transaction
+- Purchase Frequency = Total Transaction / Total Number of Customers
+- Churn Rate = 1 - Repeat Rate
+- Repeat Rate = The rate of customers who have made multiple purchases divided by the total number of customers.
+- Profit Margin = Total Price * 0.10
 
