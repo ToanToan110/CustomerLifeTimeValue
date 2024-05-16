@@ -38,3 +38,28 @@ With:
 - Repeat Rate = The rate of customers who have made multiple purchases divided by the total number of customers.
 - Profit Margin = Total Price * 0.10
 
+# Calculate the cusomer life time value:
+This function is used to calculate the CLV of each customer:
+```Python
+cltv_c["Average Order Value"] = cltv_c["Total Price"].sum() / cltv_c["Total Transaction"].sum()
+cltv_c["Purchase Frequency"] = cltv_c["Total Transaction"] / cltv_c.shape[0]
+cltv_c['Profit Margin'] = cltv_c['Total Price'] * 0.10
+repeat_rate = cltv_c[cltv_c["Total Transaction"] > 1].shape[0] / cltv_c.shape[0]
+
+churn_rate = 1 - repeat_rate
+cltv_c['Customer Value'] = cltv_c['Average Order Value'] * cltv_c["Purchase Frequency"]
+cltv_c["CLV"] = (cltv_c["Customer Value"] / churn_rate) * cltv_c["Profit Margin"]
+
+cltv_c.reset_index(inplace = True)
+cltv_c.head()
+```
+
+And the output of that process is:
+
+![image](https://github.com/ToanToan110/CustomerLifeTimeValue/assets/64849001/de616644-2eea-47a1-bcc0-b573c8f44e6b)
+
+Overview the distribution of CLV:
+![image](https://github.com/ToanToan110/CustomerLifeTimeValue/assets/64849001/bc0f9c8a-dc40-4b00-869a-6f36ed59f4d8)
+
+# Training model to predict CLV:
+
